@@ -32,6 +32,7 @@
 	CIFilterGenerator *generator = [self filterGeneratorByLoadingIt];
 	if (!generator) {
 		generator = [self filterGeneratorByCreatingIt];
+		[generator writeToURL:[self filterURL] atomically:YES];
 	}
 
 	return [generator filter];
