@@ -13,6 +13,9 @@
 		3137938B17152DFA007D208A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3137938917152DFA007D208A /* Credits.rtf */; };
 		3137938E17152DFA007D208A /* PRHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3137938D17152DFA007D208A /* PRHAppDelegate.m */; };
 		3137939117152DFB007D208A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3137938F17152DFB007D208A /* MainMenu.xib */; };
+		3137939A17152E4B007D208A /* PRHEmbosserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3137939817152E4B007D208A /* PRHEmbosserWindowController.m */; };
+		3137939C17152E55007D208A /* PRHEmbosserWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3137939E17152E55007D208A /* PRHEmbosserWindowController.xib */; };
+		313793A017152E6C007D208A /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3137939F17152E6C007D208A /* Quartz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,10 @@
 		3137938C17152DFA007D208A /* PRHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRHAppDelegate.h; sourceTree = "<group>"; };
 		3137938D17152DFA007D208A /* PRHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRHAppDelegate.m; sourceTree = "<group>"; };
 		3137939017152DFB007D208A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3137939717152E4B007D208A /* PRHEmbosserWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRHEmbosserWindowController.h; sourceTree = "<group>"; };
+		3137939817152E4B007D208A /* PRHEmbosserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRHEmbosserWindowController.m; sourceTree = "<group>"; };
+		3137939D17152E55007D208A /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/PRHEmbosserWindowController.xib; sourceTree = "<group>"; };
+		3137939F17152E6C007D208A /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +44,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3137937B17152DFA007D208A /* Cocoa.framework in Frameworks */,
+				313793A017152E6C007D208A /* Quartz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				3137937A17152DFA007D208A /* Cocoa.framework */,
+				3137939F17152E6C007D208A /* Quartz.framework */,
 				3137937C17152DFA007D208A /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -85,6 +94,9 @@
 				3137938C17152DFA007D208A /* PRHAppDelegate.h */,
 				3137938D17152DFA007D208A /* PRHAppDelegate.m */,
 				3137938F17152DFB007D208A /* MainMenu.xib */,
+				3137939717152E4B007D208A /* PRHEmbosserWindowController.h */,
+				3137939817152E4B007D208A /* PRHEmbosserWindowController.m */,
+				3137939E17152E55007D208A /* PRHEmbosserWindowController.xib */,
 				3137938117152DFA007D208A /* Supporting Files */,
 			);
 			path = "Folder Embosser";
@@ -157,6 +169,7 @@
 				3137938517152DFA007D208A /* InfoPlist.strings in Resources */,
 				3137938B17152DFA007D208A /* Credits.rtf in Resources */,
 				3137939117152DFB007D208A /* MainMenu.xib in Resources */,
+				3137939C17152E55007D208A /* PRHEmbosserWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +182,7 @@
 			files = (
 				3137938717152DFA007D208A /* main.m in Sources */,
 				3137938E17152DFA007D208A /* PRHAppDelegate.m in Sources */,
+				3137939A17152E4B007D208A /* PRHEmbosserWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +211,14 @@
 				3137939017152DFB007D208A /* en */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		3137939E17152E55007D208A /* PRHEmbosserWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3137939D17152E55007D208A /* en */,
+			);
+			name = PRHEmbosserWindowController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
