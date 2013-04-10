@@ -121,6 +121,12 @@
 	[generator exportKey:kCIInputBackgroundImageKey fromObject:multiplyEdgedTemplateOverFolder withName:nil];
 	[generator exportKey:kCIOutputImageKey fromObject:multiplyEdgedTemplateOverFolder withName:nil];
 
+	generator.classAttributes = @{
+		kCIAttributeFilterDisplayName: NSLocalizedString(@"Emboss folder icon", @"Filter display name"),
+		kCIAttributeDescription: NSLocalizedString(@"Emboss an image onto a background image, which should be the generic folder icon", @"Filter description"),
+		kCIAttributeFilterCategories: @[ kCICategoryCompositeOperation ],
+	};
+
 	return generator;
 }
 
