@@ -102,8 +102,18 @@
 	[generator connectObject:oneHalfOverEdges withKey:kCIOutputImageKey
 	                toObject:oneFifthAlpha withKey:kCIInputImageKey];
 
-	CIFilter *multiplyEdgedTemplateOverFolder = [CIFilter filterWithName:@"CIMultiplyBlendMode"];
+	CIFilter *perspective = [self singleFilterWithName:@"CIPerspectiveTransform" withValues:@{
+		//These coordinates are relative to a 128 by 128 icon.
+		@"inputTopLeft": [CIVector vectorWithX:36.0 Y:81.0],
+		@"inputTopRight": [CIVector vectorWithX:92.0 Y:81.0],
+		@"inputBottomLeft": [CIVector vectorWithX:38.0 Y:30.0],
+		@"inputBottomRight": [CIVector vectorWithX:90.0 Y:30.0],
+	}];
 	[generator connectObject:oneFifthAlpha withKey:kCIOutputImageKey
+	                toObject:perspective withKey:kCIInputImageKey];
+
+	CIFilter *multiplyEdgedTemplateOverFolder = [CIFilter filterWithName:@"CIMultiplyBlendMode"];
+	[generator connectObject:perspective withKey:kCIOutputImageKey
 	                toObject:multiplyEdgedTemplateOverFolder withKey:kCIInputImageKey];
 
 	[generator exportKey:kCIInputImageKey fromObject:alphaToMask withName:nil];
